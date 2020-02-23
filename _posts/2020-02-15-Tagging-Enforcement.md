@@ -2,7 +2,7 @@
 layout: post
 title: Tagging Enforcement!
 ---
-Recently we embarked on a project to build a new cloud hosting solution in both AWS and Azure. We wanted to set some basic standards from day one and where possible to enforce them at resource creation time. One of these standards was to define a set of mandatrory resorce tags for cost attribution and resource identification and management.
+Recently we embarked on a project to build a new cloud hosting solution in both AWS and Azure. We wanted to set some basic standards from day one and where possible to enforce them at resource creation time. One of these standards was to define a set of mandatrory resource tags for cost attribution and resource identification and management.
 
 It was important that immediate feedback of any violation of the tagging policy was provided, that is, we needed to enforce the tagging standard at resource creation time and not have a separate process audit and terminate non compliant resources after the event.
 
