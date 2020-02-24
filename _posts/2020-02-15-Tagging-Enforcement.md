@@ -6,7 +6,9 @@ Recently we embarked on a project to build a new cloud hosting solution in both 
 
 It was important that immediate feedback of any violation of the tagging policy was provided, that is, we needed to enforce the tagging standard at resource creation time and not have a separate process audit and terminate non-compliant resources after the event.
 
-Each cloud has a slightly different way of implementing this functionality. Lets look at AWS first...
+Each cloud has a slightly different way of implementing this functionality. 
+
+##Lets look at AWS first...
 
 We can use an AWS [Service Control Policy](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scp.html) (SCP) to specify which tags must be present at resource creation time. The SCP allows us to specify the tag names, but it does not allow us to define any controls over the values. Some of our tag values, such as cost code, should confirm to a known pattern, so we could, in theory, use a regular expression to validate these.
 
