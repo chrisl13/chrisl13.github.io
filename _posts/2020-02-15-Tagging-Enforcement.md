@@ -18,6 +18,8 @@ We use Terraform to manage our infrastructure and it stores state in S3. Unfortu
 
 S3 is not the only service that doesn't support tagging on creation, and worse still there does not seem to be a definitive list. For AWS we have had to compromise. We are now deploying SCP's that mandate tagging on a per service basis, EC2 and RDS being our first two use-cases, and we will use tools such as AWS Config and Cloud Custodian to audit tag compliance on other services. If appropriate we will deploy mandatory tagging for other services based on our audit results.
 
+## And so to Azure...
+
 Azure has a similar concept to AWS, simply called [Policy](https://docs.microsoft.com/en-us/azure/governance/policy/overview). Initially we thought mandating tagging in Azure would be simpler than AWS as the policy engine is intelligent enough to exclude resources that do not support tagging on creation from enforcement. Therefore is it possible to mandate tagging on create for all resources and Azure will waive this policy enforcement if necessary.
 
 However, we soon tripped over a different problem with Azure Kubernetes Service (AKS). An AKS cluster consists of a *Control Plane* and one or more *Node Pools* of VMs. You can annotate your "jobs" in K8s with things like "I need 2 cores minimum" or "I need x RAM" and the scheduler takes care of placing the work in the correct node pool. However the tags we applied when creating the cluster are not passed to the node pool and our Policy denies their creation causing our cluster to fail.
