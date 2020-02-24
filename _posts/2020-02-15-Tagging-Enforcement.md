@@ -32,6 +32,6 @@ There was also concern that this behaviour may be exhibited by other Azure servi
 
  As with AWS we have had to fall back to deploying tag enforcement policies on a per service basis and regular audit and reporting of compliance for the rest of the estate.
 
-It's important to note that our SCP's only apply to newly created infrastructure. Existing infrastructure that does not comply with the SCP will not be effected until such time it should be relaunched.
+It's important to note that our Policy/SCP's only apply to newly created infrastructure. Existing infrastructure that does not comply with the Policy/SCP will not be effected until such time it should be relaunched.
 
-The major disadvantage of a per service approach is that should we wish to roll out SCP's for additional services we have to ensure all users of those services are compliant with our tagging policy before we do so, otherwise we may impact their service, especially for events such as autoscale which may fail when they are required causing an incident sceenario. 
+The major disadvantage of a per service approach is that should we wish to roll out Policy/SCP's for additional services we have to ensure all users of those services are compliant with our tagging policy before we do so, otherwise we may impact their service, especially for events such as autoscale which may fail when they are required causing an incident sceenario. 
