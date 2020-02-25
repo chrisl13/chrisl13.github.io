@@ -16,7 +16,7 @@ Our initial SCP was to mandate tagging for all AWS services using a simple catch
 
 We use Terraform to manage our infrastructure and it stores state in S3. Unfortunately it does not provide support to tag s3 objects on creation and so by implementing this policy we broke our automated infrastructure management tooling. 
 
-S3 is not the only service that doesn't support tagging on creation, and worse still there does not seem to be a definitive list. For AWS we have had to compromise. We are now deploying SCP's that mandate tagging on a per service basis, EC2 and RDS being our first two use-cases, and we will use tools such as AWS Config and Cloud Custodian to audit tag compliance on other services. If appropriate we will deploy mandatory tagging for other services based on our audit results.
+S3 is not the only service that doesn't support tagging on creation, and worse still there does not seem to be a definitive list. For AWS we have had to compromise. We are now deploying SCP's that mandate tagging on a per service basis, EC2 and RDS being our first two use-cases, and we will use tools such as [AWS Config](https://aws.amazon.com/config/) and [Cloud Custodian](https://github.com/cloud-custodian/cloud-custodian) to audit tag compliance on other services. If appropriate we will deploy mandatory tagging for other services based on our audit results.
 
 ## And so to Azure...
 
