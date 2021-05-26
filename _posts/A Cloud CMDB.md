@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Cloud CMDB
+title: A Cloud CMDB
 ---
 We’ve recently been working with a large customer who has transitioned fully to the cloud and wishes to update their support systems and process. As part of this project we were asked to look at their CMDB system.
 
