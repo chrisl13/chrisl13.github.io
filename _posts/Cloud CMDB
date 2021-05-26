@@ -26,7 +26,9 @@ We also realised that in the current CMDB we only tracked information to a certa
 
 We wondered what would happen if we treated systems in the same way. For example, we might define a system to serve web content. We would define some information, such as the number of concurrent users we expect it to serve and the required response times, but we realised we were not concerned about the number of servers this system ran on. Nor even if it ran on servers at all. We were embracing Serverless technology and SaaS, which further supported our hypothesis that we were less and less interested in physical hardware specs and more interested in systems and their compliance with desired behaviour.
 
-<grapg of autoscale disk>
+![graph showing change in resources over time](/images/resource_ts.png)
+The above graph shows how deployment of a particular resource changes over time.
+
 
 Having gained experience of running workloads in the cloud, we observed that for most activities including support, incident resolution and cost control we were still not interested in the number of servers or resources deployed at any given time, but how this number compared to the typical behaviour of the system under similar conditions. We noticed we were increasingly looking at graphs of system behaviour over time and identifying differences, rather than discrete values.
 
