@@ -17,6 +17,8 @@ One of the realisations was that the CMDB was not provided for the DevOps teams 
 The move to cloud had changed the internal dynamic, for example, DevOps teams were responsible for the support and incident management of their products (you built it, you run it).
 Automation and the ability to scale up or down on demand had also changed how we thought about our CMDB. We realised we were no longer interested in information such as the number of servers running at any given time, but started to think about systems as a whole and the health of these systems.
 
+## Cattle Not Pets
+
 This change in thinking aligns with the [Cattle not pets](http://cloudscaling.com/blog/cloud-computing/the-history-of-pets-vs-cattle/) analogy 
 
 >“Arrays of more than two servers, that are built using automated tools, and are designed for failure, where no one, two, or even three servers are irreplaceable.”
@@ -31,6 +33,8 @@ The above graph shows how deployment of a particular resource changes over time.
 
 
 Having gained experience of running workloads in the cloud, we observed that for most activities including support, incident resolution and cost control we were still not interested in the number of servers or resources deployed at any given time, but how this number compared to the typical behaviour of the system under similar conditions. We noticed we were increasingly looking at graphs of system behaviour over time and identifying differences, rather than discrete values.
+
+##Ebb and Flow
 
 This led us to the realisation that our next CMDB needed to be a time series representing the changes to state of our cloud infrastructure. We could represent any resource as a single point of telemetry, because the definition of this resource was encapsulated in code. 
 
