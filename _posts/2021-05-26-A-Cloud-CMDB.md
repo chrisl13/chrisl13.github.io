@@ -14,7 +14,7 @@ Exploring this concept further we began to question what information we needed t
 
 One of the realisations was that the CMDB was not provided for the DevOps teams to use, but for support teams such as change and incident management, finance, etc.
 
-The move to cloud had changed the internal dynamic, for example, DevOps teams were responsible for the support and incident management of their products (you built it, you run it).
+The move to cloud had changed the internal dynamic, for example, DevOps teams were responsible for the support and incident management of their products ([you build it, you run it](https://www.stevesmith.tech/blog/you-build-it-you-run-it-at-scale/)).
 Automation and the ability to scale up or down on demand had also changed how we thought about our CMDB. We realised we were no longer interested in information such as the number of servers running at any given time, but started to think about systems as a whole and the health of these systems.
 
 ## Cattle Not Pets
