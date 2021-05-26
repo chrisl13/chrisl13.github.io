@@ -42,7 +42,7 @@ Duplicating resource definitions into a CMDB was time consuming and expensive - 
 
 Individual DevOps teams were already used to using the metrics provided by their Cloud Provider to see this data for the accounts and infrastructure they maintain, but we still wanted a global view of all cloud assets.
 
-To deliver this we chose a SaaS product called Wavefront (now Tanzu Observability). To describe it as a SaaS time series database would be massively understating it, as it has powerful data analytic functions built in, allowing us to query and alert on any of the data we ingest into it in a number of different ways.
+To deliver this we chose a SaaS product called Wavefront (now [Tanzu Observability](https://tanzu.vmware.com/observability)). To describe it as a SaaS time series database would be massively under selling it, as it has powerful data analytic functions built in, allowing us to query and alert on any of the data we ingest into it in a number of different ways.
 
 Initially the new CMDB was met with some scepticism, especially amongst those parts of the business that traditionally had more hands off roles. However, for our DevOps teams it has turned out to be exactly the right tool, containing the correct information they require to manage a large and complex estate of cloud based resources.
 
