@@ -34,7 +34,7 @@ The above graph shows how deployment of a particular resource changes over time.
 
 Having gained experience of running workloads in the cloud, we observed that for most activities including support, incident resolution and cost control we were still not interested in the number of servers or resources deployed at any given time, but how this number compared to the typical behaviour of the system under similar conditions. We noticed we were increasingly looking at graphs of system behaviour over time and identifying differences, rather than discrete values.
 
-##Ebb and Flow
+## Ebb and Flow
 
 This led us to the realisation that our next CMDB needed to be a time series representing the changes to state of our cloud infrastructure. We could represent any resource as a single point of telemetry, because the definition of this resource was encapsulated in code. 
 
