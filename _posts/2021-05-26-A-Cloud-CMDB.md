@@ -38,7 +38,7 @@ Having gained experience of running workloads in the cloud, we observed that for
 
 This led us to the realisation that our next CMDB needed to be a time series representing the changes to state of our cloud infrastructure. We could represent any resource as a single point of telemetry, because the definition of this resource was encapsulated in code. 
 
-Duplicating this into a CMDB was time consuming and expensive - both in terms of Engineering effort and in terms of the amount of duplicate data we would need to store and search, compared to a single telemetry point to represent the presence of any defined resource.
+Duplicating resource definitions into a CMDB was time consuming and expensive - both in terms of Engineering effort and in terms of the amount of structured data we would need to store and search, compared to a single telemetry point to represent the presence of any defined resource.
 
 Individual DevOps teams were already used to using the metrics provided by their Cloud Provider to see this data for the accounts and infrastructure they maintain, but we still wanted a global view of all cloud assets.
 
