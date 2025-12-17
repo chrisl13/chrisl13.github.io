@@ -157,7 +157,7 @@ Implement robust error handling for production reliability:
 def safe_operation(data: str) -> str:
     try:
         # Validate input
-        if not data or len(data) == 0:
+        if not data.strip():
             raise ValueError("Data cannot be empty")
         
         # Process the data (example operation)
