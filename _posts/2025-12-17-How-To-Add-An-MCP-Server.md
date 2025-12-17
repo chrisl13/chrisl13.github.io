@@ -156,8 +156,13 @@ Implement robust error handling for production reliability:
 @mcp.tool()
 def safe_operation(data: str) -> str:
     try:
-        result = process_data(data)
-        return result
+        # Validate input
+        if not data or len(data) == 0:
+            raise ValueError("Data cannot be empty")
+        
+        # Process the data (example operation)
+        result = data.upper()
+        return f"Processed: {result}"
     except ValueError as e:
         return f"Invalid input: {str(e)}"
     except Exception as e:
