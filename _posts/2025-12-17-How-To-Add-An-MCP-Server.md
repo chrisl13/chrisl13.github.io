@@ -48,10 +48,10 @@ pip install fastmcp
 Here's a basic example of an MCP server in Python:
 
 ```python
-from mcp.server.fastmcp import FastMCP
+from fastmcp import FastMCP
 
 # Initialize the MCP server
-mcp = FastMCP(name="my_tool_server")
+mcp = FastMCP("my_tool_server")
 
 # Define a simple tool
 @mcp.tool()
@@ -139,16 +139,13 @@ Configure your AI application to connect to your MCP server. For Claude Desktop,
 For production deployments, implement proper authentication:
 
 ```python
-from mcp.server.fastmcp import FastMCP
-from mcp.server.auth import OAuth2Authentication
+from fastmcp import FastMCP
 
-mcp = FastMCP(
-    name="secure_server",
-    auth=OAuth2Authentication(
-        token_url="https://your-auth-provider.com/token",
-        client_id="your-client-id"
-    )
-)
+# Initialize with security considerations
+mcp = FastMCP("secure_server")
+
+# Implement authentication in your server logic
+# Note: Specific auth implementations may vary based on your security requirements
 ```
 
 ### Error Handling
@@ -172,15 +169,16 @@ def safe_operation(data: str) -> str:
 For stateful operations, implement proper session management:
 
 ```python
-from mcp.server.session import SessionManager
-
-session_manager = SessionManager()
+# Maintain session state in your application
+sessions = {}
 
 @mcp.tool()
 def stateful_operation(session_id: str, data: str) -> str:
-    session = session_manager.get_or_create(session_id)
-    session.process(data)
-    return session.get_result()
+    if session_id not in sessions:
+        sessions[session_id] = {"data": []}
+    
+    sessions[session_id]["data"].append(data)
+    return f"Processed {len(sessions[session_id]['data'])} items in session"
 ```
 
 ## Best Practices
